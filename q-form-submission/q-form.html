@@ -1,0 +1,40 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+Creates a quick form and sends it to the server link provided [**Live demo**](../q-form/demo.html)
+
+<iframe src="http://ghbtns.com/github-btn.html?user=mahirk&repo=q-form&type=watch&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="170" height="30"></iframe>
+
+##### Example
+
+    <q-form></q-form>
+
+@element q-form
+@blurb Creates a quick form and sends it to the server link provided
+@status alpha
+@homepage mahirk.github.io/q-form
+-->
+<polymer-element name="q-form" attributes="position type sendTo">
+
+  <template id="mains">
+
+    <link id = "FormCSS" rel="stylesheet" href="q-form.css" />
+    <link id = "FormType" rel="import" href="">
+
+
+  </template>
+
+  <script>
+
+    Polymer('q-form', {
+      if(type === null){
+        type: "";
+      },
+     this.$.FormCSS.href = "q-form" + type + ".css",
+
+
+    });
+
+  </script>
+
+</polymer-element>

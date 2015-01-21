@@ -1,0 +1,14 @@
+{
+  "name": "q-form-contact",
+  "description": "Creates a quick form and sends it to the server link provided",
+  "version": "0.0.0",
+  "keywords": [
+    "polymer",
+    "web-components"
+  ],
+  "main": "q-form-contact.html",
+  "homepage": "https://github.com/mahirk/q-form-contact/",
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.2.4"
+  }
+}

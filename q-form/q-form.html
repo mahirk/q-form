@@ -1,0 +1,43 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" types="text/javascript"></script>
+
+<!--
+Creates a quick form and sends it to the server link provided [**Live demo**](../q-form/demo.html)
+
+<iframe src="http://ghbtns.com/github-btn.html?user=mahirk&repo=q-form&types=watch&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="170" height="30"></iframe>
+
+##### Example
+
+    <q-form></q-form>
+
+@element q-form
+@blurb Creates a quick form and sends it to the server link provided
+@status alpha
+@homepage mahirk.github.io/q-form
+-->
+<polymer-element name="q-form" attributes="types sendto">
+
+
+  <template >
+
+    <link id = "FormCSS" rel="stylesheet" href="q-form.css" />
+    <div id="formhere"></div>
+
+  </template>
+
+  <script>
+
+    Polymer('q-form', {
+      domReady: function(){
+        console.log(this.types);
+        var filetypes = "../q-form-" + this.types + "/q-form-" + this.types + ".html";
+        $('head').append('<link id = "Formtypes" rel="import" href= ' + filetypes + '>');
+        this.$.formhere.innerHTML = '<q-form-' + this.types + ' sendto=' + this.sendto + '></q-form-' + this.types + '>';
+      //$('<q-form-' + this.typess + '/>').attr('sendto', this.sendto).appendTo('#mains');
+      }
+    });
+
+  </script>
+
+</polymer-element>

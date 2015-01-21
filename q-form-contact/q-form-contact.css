@@ -1,0 +1,64 @@
+﻿:host {
+  display: block;
+}
+
+label {
+    display: block;
+    text-align: left;
+    padding: 15px 0 15px 0;
+    font-family: calibri;
+    font-size: 11pt;
+}
+
+#formsC {
+    padding: 30px;
+}
+input[type="text"]   {
+    width:50%;
+    font-family: 'Open Sans', calibri;
+    display:block;
+    border: 1px solid #999;
+    height: 20px;
+    padding: 10px;
+    -webkit-border-radius: 4px;
+}
+
+input:not([type="text"]) {
+    width:20%;
+    font-size: 9pt;
+    display:inline-block;
+    height: 35px;
+    padding: 10px;
+    -webkit-border-radius: 4px;
+}
+
+.message {
+    width:75%;
+    font-family: 'Open Sans', calibri;
+    display:block;
+    border: 1px solid #999;
+    height: 200px;
+    -webkit-border-radius: 4px;
+    padding: 10px;
+}
+textarea:focus, input:focus {
+    border: 1px solid #09C;
+    -webkit-border-radius: 4px;
+}
+
+.contact .box{
+    margin: 20px 0 60px 0;
+    display:inline-block;
+    width:24%;
+    font-size: 13px;
+    vertical-align:top;
+}
+
+.contact {
+    width: 90%;
+}
+
+#contactdetails{
+    text-align:left;
+    padding: 0 10px;
+}

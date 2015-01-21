@@ -1,0 +1,52 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+Creates a quick form and sends it to the server link provided [**Live demo**](../q-form/demo.html)
+
+<iframe src="http://ghbtns.com/github-btn.html?user=mahirk&repo=q-form&type=watch&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="170" height="30"></iframe>
+
+##### Example
+
+    <q-form></q-form>
+
+@element q-form-contact
+@blurb Creates a quick contact form and sends it to the server link provided
+@status alpha
+@homepage mahirk.github.io/q-form
+-->
+<polymer-element name="q-form-contact" attributes="sendto">
+
+  <template id="mains">
+
+    <link id = "FormCSS" rel="stylesheet" href="q-form-contact.css" />
+   <form id = "formsC" action = "post.php?sendto={{sendto}}" method = "post" name="uploadData">
+      <label>Name:*</label>
+      <input type="text" name="cf_name" required="">
+      <label>Email:*</label>
+      <input type="text" name="cf_email" required="">
+      <label>Topic:*</label>
+      <input type="text" name="cf_topic" required="">
+      <label>Details:*</label>
+      <textarea name="cf_message" class="message" required=""></textarea>
+      <br>
+      <input type="submit" class="button" value="Send">
+      <input type="reset" class="button" value="Clear">
+    </form>
+
+  </template>
+
+  <script>
+
+    Polymer('q-form-contact', {
+        clickHandler: function () {
+        $('<input />').attr('type', 'hidden')
+            .attr('name', 'sendto')
+            .attr('value', 'sendto')
+            .appendTo('#formsC');
+            console.log(this.sendto);
+      }
+    });
+
+  </script>
+
+</polymer-element>
